@@ -367,7 +367,7 @@ class OTServ extends Attributes {
         $this->ip = $ip;
         $this->port = $port;
 
-        static::$folder = storage_path('serverinfo/');
+        static::$folder = __DIR__.'/cache/';
         $this->file = static::$folder."${ip}.json";
         static::$message = chr(6).chr(0).chr(255).chr(255).'info';
     }
